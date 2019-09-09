@@ -1,0 +1,27 @@
+#menu ul{
+    list-style-type: none;
+    text-align: right;
+ } 
+
+ #menu li{
+    display: inline;
+    text-align: center;
+    margin: 0 10px 0 0;
+ } 
+
+ #menu li a {
+    color: rgb(14, 17, 17);
+    text-decoration: none;
+}
+
+.menuPrincipal:hover {
+
+    text-decoration: underline;
+}
+
+#logo {
+    float: left;
+}
+
+
+
