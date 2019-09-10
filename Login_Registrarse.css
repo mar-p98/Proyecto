@@ -1,0 +1,30 @@
+*{
+  box-sizing: border-box;
+}
+
+.btn_login{
+  background-color: #91DFBF;
+  color: white;
+
+  margin-top: 10px;
+}
+
+.contenedor{
+
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.boton{
+  text-align: center;
+}
+
+#formulario .form-group label{
+  color: grey;
+}
+
+#pass{
+  color: grey;
+}
