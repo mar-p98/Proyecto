@@ -32,5 +32,11 @@
    height: 500;
 
   }
-  
+
+  #titulo1 {
+    margin: 1rem auto;
+    width:100%;
+    text-align: center;
+}
+
 
