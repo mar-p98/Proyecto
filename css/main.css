@@ -39,4 +39,25 @@
     text-align: center;
 }
 
+.contenedor {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.elemento {
+
+    margin: 30px;
+}
+
+.nombreArticulo{
+
+    text-align: center;
+}
+
+.botoncomprar {
+    text-align: center;
+    margin: auto; display: block;
+}
 
