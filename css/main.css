@@ -59,5 +59,16 @@
 .botoncomprar {
     text-align: center;
     margin: auto; display: block;
+    padding: 12px;
+    color: #616E6E;
+    background-color:#BFDCDA;
+    border-radius: 10px;
+    border: 1px solid;    
+       
+}
+
+.botoncomprar:hover {
+    cursor:pointer;
+    opacity: 0.8;
 }
 
