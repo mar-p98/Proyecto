@@ -1,0 +1,147 @@
+
+
+body {
+margin: 0;
+background-image: url(../img/fondoB.jpg);
+background-repeat: no-repeat;
+background-size: 990px;
+background-position: right top;
+background-attachment: fixed;
+}
+
+
+
+
+/* FORMULARIO =================================== */
+.form_wrap{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.form_contact {
+  margin: 100px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: 35px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  width: 50%
+}
+.contact_info{
+  width: 40%;
+
+}
+h2{
+color:#BFDCDA;
+text-align: center;
+margin: 0;
+font-size: 30px;
+margin-bottom: 25px;
+}
+
+input, textarea{
+  width:100%;
+  margin-bottom: 25px;
+  padding: 7px;
+  box-sizing: border-box;
+  font-size: 15px;
+  border: none;
+  border-radius: 7px;
+}
+
+textarea{
+  max-width: width:100%;
+}
+
+#boton {
+ padding: 12px;
+ color: #616E6E;
+ background-color:#BFDCDA;
+}
+
+#boton:hover{
+  cursor:pointer;
+}
+
+@media(max-with:480px){
+  .form_wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+}
+/* Informacion de Contacto*/
+
+
+h1{
+  background-size: 20px;
+  color:rgb(242, 192, 105);
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+.cantact_info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 15px;
+    margin-left: 25px;
+    background-color:rgba(198, 231, 238, 0.2) ;
+    overflow: hidden;
+
+}
+
+.info_title,
+.info_items{
+    position: relative;
+    z-index: 2;
+    color: #616E6E;
+}
+
+.info_title{
+    margin-bottom: 20px;
+}
+
+.info_title span{
+    font-size: 100px;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info_title h1{
+    font-size: 25px;
+    text-align: center;
+}
+
+.info_items p{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+
+.info_items p:nth-child(1) span{
+    font-size: 30px;
+    overflow: hidden;
+    margin: 5px;
+}
+
+.info_items p:nth-child(2) span{
+    font-size: 50px;
+    margin-right: 10px;
+    margin-left: 4px;
+}
