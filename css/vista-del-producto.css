@@ -1,0 +1,24 @@
+
+.contenedor img{
+  width: 300px;
+  padding-top: 200px;
+  
+}
+.botoncantidad{
+
+  padding: 12px;
+  color: #616E6E;
+  background-color:#BFDCDA;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.botoncomprar {
+  padding: 12px;
+  color: #616E6E;
+  background-color:#BFDCDA;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Open Sans Condensed', sans-serif;
+
+}
