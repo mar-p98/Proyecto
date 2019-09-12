@@ -1,6 +1,7 @@
 
 body {
 margin: 0;
+margin-top: 0 !important;
 background-image: url(../img/fondoB.jpg);
 background-repeat: no-repeat;
 background-size: 990px;
@@ -8,6 +9,15 @@ background-position: right top;
 background-attachment: fixed;
 }
 
+.encabezado{
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  z-index: 10;
+  font-size: 20px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
 
 /*menu=======*/
 #menu ul{
@@ -102,7 +112,6 @@ textarea{
     color: #616E6E;
     margin: auto;
 
-
 }
 
 .info_items p:nth-child(1) span{
@@ -114,4 +123,8 @@ textarea{
     font-size: 50px;
     margin-right: 10px;
     margin-left: 4px;
+}
+
+section {
+  padding: 45px;
 }
