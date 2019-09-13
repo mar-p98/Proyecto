@@ -19,34 +19,8 @@
 
 <body>
 
-  <header >
-    <div class="encabezado">
-      <img id="logo" src="img/FourBakery3.png"  width="80px"alt="">
-
-      <div id="menu">
-        <ul>
-          <li class="menuPrincipal">
-            <a href="index.html">Inicio</a>
-          </li>
-          <li class="menuPrincipal">
-            <a href="#productos">Productos</a>
-          </li>
-          <li class="menuPrincipal">
-            <a href="preguntas_frecuentes.html">FAQ</a>
-
-          </li>
-          <li class="menuPrincipal">
-            <a href="contacto.html">Contacto</a>
-          </li>
-          <li class='menuPrincipal'>
-            <a href="FormularioLogin.html">
-              <span class= 'fa fa-user-circle'></span> </a>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
+  <header>
+    <?php include("encabezado.php"); ?>
   </header>
 
   <main>
@@ -99,7 +73,7 @@
                     <figcaption class="nombreArticulo">Chocolate drip cake</figcaption>
                     <i class="fas fa-cart-arrow-down"></i>
                 </figure>
-                <a href="vistadelproducto.html"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
             </article>
 
             <article class="elemento elemento2">
@@ -107,7 +81,7 @@
                     <img  src="img/cookieSandwich.png"/> <figcaption class="nombreArticulo">Cookie Sandwich</figcaption>
                     <i class="fas fa-cart-arrow-down"></i>
                 </figure>
-                <a href="vistadelproducto.html"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
             </article>
 
             <article class="elemento elemento3">
@@ -115,7 +89,7 @@
                     <img src="img/redvelvetcake1.png"/> <figcaption class="nombreArticulo">Red Velvet Cake</figcaption>
                     <i class="fas fa-cart-arrow-down"></i>
                 </figure>
-                <a href="vistadelproducto.html"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
             </article>
 
         </div>
@@ -124,36 +98,13 @@
         </section>
 
 
-        <footer>
-
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-6 centrado">
-                <div class="">
-                  <h1>LOGO</h1>
-                  <p>Seguinos :
-                    <a href="https://facebook.com"> <ion-icon name="logo-facebook" size="large class="redes_icons"" ></ion-icon> </a>
-                    <a href="https://twitter.com"> <ion-icon name="logo-twitter" size="large class="redes_icons"" ></ion-icon></a>
-                    <a href="https://instagram.com"> <ion-icon name="logo-instagram" size="large class="redes_icons"" ></ion-icon></a>
-                  </p>
-
-                </div>
-              </div>
-              <div class="col-12 col-md-6 ">
-                <h2>Contáctenos</h2>
-                <ul type="none">
-                  <li> <ion-icon name="locate" id="icons"></ion-icon> Lima 111, CABA</li>
-                  <li> <ion-icon name="logo-whatsapp" id="icons"></ion-icon> (+54) 1134567890 </li>
-                  <li> <ion-icon name="mail" id="icons"></ion-icon> info.contact@gmail.com</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </footer>
 
 
   </main>
+
+  <footer>
+     <?php include("pieDePagina.php"); ?>
+  </footer>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

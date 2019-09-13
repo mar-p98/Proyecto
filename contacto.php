@@ -11,8 +11,14 @@
 
 
 </head>
-<body id"contactanos">
-  <main>
+
+<body>
+
+  <header>
+    <?php include("encabezado.php"); ?>
+  </header>
+
+  <main id="contactanos">
 
     <form  action="" class="form_contact">
      <h2>Envia un mensaje</h2>
@@ -31,6 +37,10 @@
 
 
 </main>
+
+<footer>
+   <?php include("pieDePagina.php"); ?>
+ </footer>
 
 </body>
 </html>

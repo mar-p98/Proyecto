@@ -23,6 +23,6 @@
             <input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre">
         </div>
     </div>
-               
+
 </body>
 </html>

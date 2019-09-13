@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/Login_Registrarse.css">
     <title></title>
   </head>
+  <header>
+    <?php include("encabezado.php"); ?>
+  </header>
   <body>
 
     <div class="container">
@@ -43,6 +46,9 @@
 
     </div>
 
+    <footer>
+      <?php include("pieDePagina.php"); ?>
+    </footer>
 
 
 

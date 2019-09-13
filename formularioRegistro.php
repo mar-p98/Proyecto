@@ -12,6 +12,10 @@
   </head>
   <body>
 
+    <header>
+      <?php include("encabezado.php"); ?>
+    </header>
+
 
     <div class="container">
       <div class="row contenedor">
@@ -65,6 +69,9 @@
 
 
 
+   <footer>
+     <?php include("pieDePagina.php"); ?>
+   </footer>
 
 
 
