@@ -34,7 +34,7 @@
               <button type="submit" class="btn btn_login" >Iniciar Sesión</button>
             </div>
             <div class="registrarse">
-              <small id="pass">¿No tenés cuenta? <a href="FormularioRegistro.php">Registrate</a> </small>
+              <small id="pass">¿No tenés cuenta? <a href="formularioRegistro.php">Registrate</a> </small>
             </div>
           </form>
         </div>
