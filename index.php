@@ -20,7 +20,7 @@
 <body>
 
   <header>
-    <?php include("encabezado.php"); ?>
+    <?php require("encabezado.php"); ?>
   </header>
 
   <main>
@@ -103,7 +103,7 @@
   </main>
 
   <footer>
-     <?php include("pieDePagina.php"); ?>
+     <?php require("pieDePagina.php"); ?>
   </footer>
 
 </body>

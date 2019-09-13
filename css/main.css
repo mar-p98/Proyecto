@@ -13,7 +13,9 @@ body{
   font-family: 'Open Sans Condensed', sans-serif;
 
 }
-
+.encabezado img{
+  width: 100px;
+}
 
 #menu ul{
     list-style-type: none;

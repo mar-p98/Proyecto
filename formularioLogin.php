@@ -10,7 +10,7 @@
     <title></title>
   </head>
   <header>
-    <?php include("encabezado.php"); ?>
+    <?php require("encabezado.php"); ?>
   </header>
   <body>
 
@@ -47,7 +47,7 @@
     </div>
 
     <footer>
-      <?php include("pieDePagina.php"); ?>
+      <?php require("pieDePagina.php"); ?>
     </footer>
 
 

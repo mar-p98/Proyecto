@@ -13,7 +13,7 @@
   <body>
 
     <header>
-      <?php include("encabezado.php"); ?>
+      <?php require("encabezado.php"); ?>
     </header>
 
 
@@ -70,7 +70,7 @@
 
 
    <footer>
-     <?php include("pieDePagina.php"); ?>
+     <?php require("pieDePagina.php"); ?>
    </footer>
 
 
