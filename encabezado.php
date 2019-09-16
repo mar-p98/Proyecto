@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/font-awesome.css">
   <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Courgette|Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 
@@ -21,26 +22,26 @@
 
   <header >
     <div class="encabezado">
-      <img id="logo" src="img/FourBakery3.png"  width="80px"alt="">
+      <img id="logo" src="img/FourBakery.png"  width="80px"alt="">
 
       <div id="menu">
         <ul>
           <li class="menuPrincipal">
-            <a href="index.php">Inicio</a>
+            <a href="index.php">INICIO</a>
           </li>
           <li class="menuPrincipal">
-            <a href="index.php#productos">Productos</a>
+            <a href="index.php#productos">PRODUCTOS</a>
           </li>
           <li class="menuPrincipal">
             <a href="preguntasFrecuentes.php">FAQ</a>
 
           </li>
           <li class="menuPrincipal">
-            <a href="contacto.php">Contacto</a>
+            <a href="contacto.php">CONTACTO</a>
           </li>
           <li class='menuPrincipal'>
-            <a href="formularioLogin.php">
-              <span class= 'fa fa-user-circle'></span> </a>
+            <a id=iconoPerson href="formularioLogin.php">
+              <span class= 'fa fa-user-circle' width="6" height="6"></span> </a>
             </a>
           </li>
         </ul>
