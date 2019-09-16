@@ -79,7 +79,7 @@
 
             <article class="elemento elemento2">
                 <figure>
-                    <img  src="img/torta de queso.jpg"/> <figcaption class="nombreArticulo">Cheesecake</figcaption>
+                    <img src="img/CupCake.jpg"/> <figcaption class="nombreArticulo">Cupcakes</figcaption>
                     <i class="fas fa-cart-arrow-down"></i>
                 </figure>
                 <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
@@ -87,20 +87,14 @@
 
             <article class="elemento elemento3">
                 <figure>
-                    <img src="img/CupCake.jpg"/> <figcaption class="nombreArticulo">Cupcakes</figcaption>
-                    <i class="fas fa-cart-arrow-down"></i>
+                  <img src="img/torta1.jpg"/>
+                  <figcaption class="nombreArticulo">Torta Celebracion</figcaption>
+                  <i class="fas fa-cart-arrow-down"></i>
                 </figure>
                 <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
             </article>
+
             <article class="elemento elemento4">
-                <figure>
-                    <img src="img/torta1.jpg"/>
-                    <figcaption class="nombreArticulo">Torta Celebracion</figcaption>
-                    <i class="fas fa-cart-arrow-down"></i>
-                </figure>
-                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
-            </article>
-            <article class="elemento elemento5">
                 <figure>
                     <img src="img/chocolate.jpg"/>
                     <figcaption class="nombreArticulo">Torta ChocoCookie</figcaption>
@@ -108,7 +102,7 @@
                 </figure>
                 <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
             </article>
-            <article class="elemento elemento6">
+            <article class="elemento elemento5">
                 <figure>
                     <img src="img/panettone.jpg"/>
                     <figcaption class="nombreArticulo">Panettone</figcaption>
@@ -116,7 +110,7 @@
                 </figure>
                 <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
             </article>
-            <article class="elemento elemento7">
+            <article class="elemento elemento6">
                 <figure>
                     <img src="img/chocalateCake.jpg"/>
                     <figcaption class="nombreArticulo">Chocolate drip cake</figcaption>
@@ -124,12 +118,21 @@
                 </figure>
                 <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
             </article>
-            <article class="elemento elemento8">
-                <figure>
-                    <img src="img/galleta.jpg"/>
-                    <figcaption class="nombreArticulo">Galletas Chocolate Chips</figcaption>
-                    <i class="fas fa-cart-arrow-down"></i>
+
+           <article class="elemento elemento7">
+              <figure>
+                 <img  src="img/torta de queso.jpg"/> <figcaption class="nombreArticulo">Cheesecake</figcaption>
+                 <i class="fas fa-cart-arrow-down"></i>
                 </figure>
+              <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+            </article>
+
+            <article class="elemento elemento8">
+             <figure>
+                 <img src="img/galleta.jpg"/>
+                 <figcaption class="nombreArticulo">Galletas Chocolate Chips</figcaption>
+                 <i class="fas fa-cart-arrow-down"></i>
+              </figure>
                 <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
             </article>
             <article class="elemento elemento9">
@@ -140,24 +143,7 @@
                 </figure>
                 <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
             </article>
-
             <article class="elemento elemento10">
-                <figure>
-                    <img src="img/CupCake.jpg"/>
-                    <figcaption class="nombreArticulo">CupCake</figcaption>
-                    <i class="fas fa-cart-arrow-down"></i>
-                </figure>
-                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
-            </article>
-            <article class="elemento elemento11">
-                <figure>
-                    <img src="img/galletaCake.jpg"/>
-                    <figcaption class="nombreArticulo">Galleta Cake</figcaption>
-                    <i class="fas fa-cart-arrow-down"></i>
-                </figure>
-                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
-            </article>
-            <article class="elemento elemento12">
                 <figure>
                     <img src="img/torta2.jpg"/>
                     <figcaption class="nombreArticulo">Torta Decorada</figcaption>
@@ -165,6 +151,24 @@
                 </figure>
                 <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
             </article>
+
+            <article class="elemento elemento11">
+                <figure>
+                    <img src="img/macarrones.jpg"/>
+                    <figcaption class="nombreArticulo">Macarrons</figcaption>
+                    <i class="fas fa-cart-arrow-down"></i>
+                </figure>
+                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+            </article>
+            <article class="elemento elemento12">
+                <figure>
+                    <img src="img/galletaCake.jpg"/>
+                    <figcaption class="nombreArticulo">Galleta Cake</figcaption>
+                    <i class="fas fa-cart-arrow-down"></i>
+                </figure>
+                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+            </article>
+
         </div>
 
 
