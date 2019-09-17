@@ -3,9 +3,13 @@ body{
 
 }
 
+main{
+    margin-top:108px;
+}
 
 .encabezado{
   position: fixed;
+  top: 0;
   background-color: white;
   width: 100%;
   z-index: 10;
