@@ -12,7 +12,7 @@
 
     <div class="contenedor">
         <article>
-         <img src="img/chocolate-cake.png"/>
+        <img src="img/chocalateCake.jpg"/>
         </article>
         <div>
             <h3>PRECIO: 600$</h3>
