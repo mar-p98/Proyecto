@@ -1,14 +1,10 @@
 
+
 *{
     box-sizing: border-box;
   }
 
-  body{
-  background-image: url("../img/fondoB.jpg");
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 1000px;
-  }
+
 
   .btn_enviar{
     background-color: #91DFBF;
@@ -18,7 +14,6 @@
   }
 
   .contenedor{
-    display: flex;
     justify-content: center;
     height: 100vh;
     align-items: center;
@@ -70,3 +65,10 @@ form {
 .user_info {
   padding: 15px;
 }
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: 220px;
