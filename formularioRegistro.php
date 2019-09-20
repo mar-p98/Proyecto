@@ -1,3 +1,32 @@
+<?php
+
+  if($_POST){
+
+    $nombre= $_POST['nombre'];
+    $email= $_POST['email'];
+    $password= password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $telefono= $_POST['telefono'];
+
+    $usuario= [
+      'nombre' => $nombre,
+      'email' => $email,
+      'password' => $password,
+      'telefono' => $telefono
+    ];
+
+    var_dump($usuario);
+
+    $json= json_encode($usuario);
+
+    var_dump($json);
+
+    file_put_contents('usuarios.json', $json);
+
+  }
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -8,70 +37,69 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/Login_Registrarse.css">
+    <link rel="stylesheet" href="css/main.css">
     <title></title>
   </head>
   <body>
 
-    <header>
-      <?php require("encabezado.php"); ?>
-    </header>
 
+    <?php require("encabezado.php"); ?>
 
-    <div class="container">
-      <div class="row contenedor">
-        <div class="col-lg-3">
+    <main>
+      <div class="container">
+        <div class="row contenedor">
+          <div class="col-lg-3">
+
+          </div>
+          <div class="col-12 col-lg-6">
+            <form id="formulario" method='post'>
+              <div class="form-group" >
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" name="nombre" value="">
+              </div>
+              <div class= form-group>
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" >
+              </div>
+              <div class="form-group">
+                <label for="tel">Telefono</label>
+                <input type="tel" class="form-control" name="telefono" value="">
+              </div>
+              <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+              </div>
+            <!--  <div class="form-group">
+                <label for="password">Confirmar contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" >
+              </div>
+            -->
+              <div class="boton"> <!--es de arriba, revisar que sea la misma, videos DH -->
+                <button type="submit" class="btn btn_login" >Registrarse</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-lg-3">
+
+          </div>
+
 
         </div>
-        <div class="col-12 col-lg-6">
-          <form id="formulario">
-            <div class="form-group">
-              <label for="nombre">Nombre</label>
-              <input type="text" class="form-control" name="nombre" value="">
-            </div>
-            <div class= form-group>
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-            </div>
-            <div class="form-group">
-              <label for="tel">Telefono</label>
-              <input type="tel" class="form-control" name="telefono" value="">
-            </div>
-            <div class="form-group">
-              <label for="password">Contraseña</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="form-group">
-              <label for="password">Confirmar contraseña</label>   <!-- revisar que sea la misma, videos DH -->
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
+      </div>
 
-            <div class="boton">
-              <button type="submit" class="btn btn_login" >Registrarse</button>
-            </div>
-          </form>
-        </div>
 
-        <div class="col-lg-3">
-
-        </div>
-
+      <div class="contenedor">
 
       </div>
-    </div>
 
-
-    <div class="contenedor">
-
-    </div>
-
-  <!-- nombre (y apellido), email, confirmar email, contraseña, fecha de nacimiento?,
-   ... boton resgitrarse y pregunta: ¿ya tienes cuenta? inciar sesion -->
+    </main>
 
 
 
-   <footer>
-     <?php require("pieDePagina.php"); ?>
-   </footer>
+
+    <?php require("pieDePagina.php"); ?>
+
 
 
 

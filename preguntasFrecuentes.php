@@ -20,9 +20,9 @@
   </head>
   <body>
 
-    <header>
-      <?php include("encabezado.php"); ?>
-    </header>
+
+    <?php include("encabezado.php"); ?>
+    
     <main>
 
 <h1>Preguntas frecuentes</h1>
@@ -120,9 +120,9 @@
   </div>
 </main>
 
-  <footer>
-    <?php include("pieDePagina.php"); ?>
-  </footer>
+
+  <?php include("pieDePagina.php"); ?>
+
 
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
