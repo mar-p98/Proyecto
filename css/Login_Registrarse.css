@@ -13,12 +13,16 @@
 
   display: flex;
   justify-content: center;
-  height: 100vh;
   align-items: center;
 }
 
 .boton{
   text-align: center;
+}
+
+#formulario{
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 #formulario .form-group label{

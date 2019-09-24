@@ -17,10 +17,17 @@
           <li class="menuPrincipal">
             <a href="contacto.php">CONTACTO</a>
           </li>
-          <li class='menuPrincipal'>
-            <a id=iconoPerson href="formularioLogin.php">
+          <li class='menuPrincipal usuario'>
+            <!-- <a id=iconoPerson href="formularioLogin.php">
               <span class= 'fa fa-user-circle' width="6" height="6"></span> </a>
-            </a>
+            </a> -->
+            <button class="btn" type="button" name="button" data-toggle="dropdown">
+              <span class= 'fa fa-user-circle' width="6" height="6"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li id="dropdown-login"><a href="formularioLogin.php">Inicia Sesión</a></li>
+                <li id="dropdown-login"><a href="formularioRegistro.php">Registrate</a></li>
+            </ul>
           </li>
         </ul>
       </div>
