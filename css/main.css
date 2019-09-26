@@ -109,7 +109,7 @@ height: 500px;
 .nombreArticulo{
     font-size: 25px;
     text-align: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;
 }
 
@@ -135,8 +135,8 @@ height: 500px;
 
 footer {
     color: white;
-    background-color: rgb(4, 4, 4);;
-    font-family: "Noto Sans JP", sans-serif;
+    background-color: rgb(34, 33, 33);;
+    font-family: 'Raleway', sans-serif;
     padding-top: 40px;
     padding-bottom: 40px;
     font-size: 20px;

@@ -17,11 +17,11 @@
   <?php require("encabezado.php"); ?>
 
     <main>
-      <div class="contenedor">
-          <article>
+      <div class="contenedor1">
+          <article class="alineacion">
           <img src="img/chocalateCake.jpg"/>
           </article>
-          <div>
+          <div class="alineacionTexto">
               <h3>PRECIO: 600$</h3>
               <h3>Cantidad</h3>
               <input class="botoncantidad" type="number"> <br>
