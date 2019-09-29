@@ -39,6 +39,8 @@
     
   ];
 
+
+
 ?>
   
   <main>
@@ -85,7 +87,7 @@
 
         <div class="contenedor">
 
-            <article class="elemento elemento1">
+            <article class="elemento" id="Elemento1">
                 <figure>
                     <img src="img/torta3.jpg"/>
                     <figcaption class="nombreArticulo">Torta Macarrons</figcaption>
@@ -93,14 +95,14 @@
                 <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
-            <article class="elemento elemento2">
+            <article class="elemento">
                 <figure>
                     <img src="img/CupCake.jpg"/> <figcaption class="nombreArticulo">Cupcakes</figcaption>
                 </figure>
                 <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
-            <article class="elemento elemento3">
+            <article class="elemento">
                 <figure>
                   <img src="img/torta1.jpg"/>
                   <figcaption class="nombreArticulo">Torta Celebracion</figcaption>
@@ -108,7 +110,7 @@
                 <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
-            <article class="elemento elemento4">
+            <article class="elemento">
                 <figure>
                     <img src="img/chocolate.jpg"/>
                     <figcaption class="nombreArticulo">Torta ChocoCookie</figcaption>
@@ -116,7 +118,7 @@
                 <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
-            <article class="elemento elemento5">
+            <article class="elemento">
                 <figure>
                     <img src="img/panettone.jpg"/>
                     <figcaption class="nombreArticulo">Panettone</figcaption>
@@ -124,7 +126,7 @@
                 <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
-            <article class="elemento elemento6">
+            <article class="elemento">
                 <figure>
                     <img src="img/chocalateCake.jpg"/>
                     <figcaption class="nombreArticulo">Chocolate drip cake</figcaption>
@@ -132,14 +134,14 @@
                 <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
-           <article class="elemento elemento7">
+           <article class="elemento">
               <figure>
                  <img  src="img/torta de queso.jpg"/> <figcaption class="nombreArticulo">Cheesecake</figcaption>
                 </figure>
                 <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
-            <article class="elemento elemento8">
+            <article class="elemento">
              <figure>
                  <img src="img/galleta.jpg"/>
                  <figcaption class="nombreArticulo">Galletas Chocolate Chips</figcaption>
@@ -147,7 +149,7 @@
               <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
-            <article class="elemento elemento9">
+            <article class="elemento">
                 <figure>
                     <img src="img/postre1.jpg"/>
                     <figcaption class="nombreArticulo">Postre</figcaption>
@@ -155,7 +157,7 @@
                 <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
-            <article class="elemento elemento10">
+            <article class="elemento">
                 <figure>
                     <img src="img/torta2.jpg"/>
                     <figcaption class="nombreArticulo">Torta Decorada</figcaption>
@@ -163,7 +165,7 @@
                 <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
-            <article class="elemento elemento11">
+            <article class="elemento">
                 <figure>
                     <img src="img/macarrones.jpg"/>
                     <figcaption class="nombreArticulo">Macarrons</figcaption>
@@ -171,7 +173,7 @@
                 <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
-            <article class="elemento elemento12">
+            <article class="elemento">
                 <figure>
                     <img src="img/galletaCake.jpg"/>
                     <figcaption class="nombreArticulo">Mini tarta frutal</figcaption>
