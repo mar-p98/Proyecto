@@ -22,23 +22,22 @@
 
 <?php require("encabezado.php");
 
-  $productos[
-    [ 'img' => 'img/torta3.jpg', 'nombre' => 'Torta Macarrons' , 'precio' => '$500'
-      'img' => 'img/CupCake.jpg', 'nombre' => 'Cupcake' , 'precio' => '$90'
-      'img' => 'img/torta1.jpg', 'nombre' => 'Torta Celebracion' , 'precio' => '$800'
-      'img' => 'img/chocolate.jpg', 'nombre' => 'Torta ChocoCookie' , 'precio' => '$800'
-      'img' => 'img/panettone.jpg', 'nombre' => 'Torta Macarrons' , 'precio' => '$900'
-      'img' => 'img/chocalateCake.jpg', 'nombre' => 'Chocolate drip cake' , 'precio' => '$700'
-      'img' => 'img/torta de queso.jpg', 'nombre' => 'Cheesecake' , 'precio' => '$500'
-      'img' => 'img/galleta.jpg', 'nombre' => 'Galletas Chocolate Chips' , 'precio' => '$100'
-      'img' => 'img/postre1.jpg', 'nombre' => 'Postre' , 'precio' => '$80'
-      'img' => 'img/torta2.jpg', 'nombre' => 'Torta Decorada' , 'precio' => '$500'
-      'img' => 'img/macarrones.jpg', 'nombre' => 'Macarrons' , 'precio' => '$200'
-      'img' => 'img/galletaCake.jpg', 'nombre' => 'Mini tarta frutal' , 'precio' => '$500'
-    ]
-  ]
+  $productos = [
 
-
+    ['img' => 'img/torta3.jpg', 'nombre' => 'Torta Macarrons' , 'precio' => '$500'],
+    ['img' => 'img/CupCake.jpg', 'nombre' => 'Cupcake' , 'precio' => '$90'],
+    ['img' => 'img/torta1.jpg', 'nombre' => 'Torta Celebracion' , 'precio' => '$800'],
+    ['img' => 'img/chocolate.jpg', 'nombre' => 'Torta ChocoCookie' , 'precio' => '$800'],
+    ['img' => 'img/panettone.jpg', 'nombre' => 'Torta Macarrons' , 'precio' => '$900'],
+    ['img' => 'img/chocalateCake.jpg', 'nombre' => 'Chocolate drip cake' , 'precio' => '$700'],
+    ['img' => 'img/torta de queso.jpg', 'nombre' => 'Cheesecake' , 'precio' => '$500'],
+    ['img' => 'img/galleta.jpg', 'nombre' => 'Galletas Chocolate Chips' , 'precio' => '$100'],
+    ['img' => 'img/postre1.jpg', 'nombre' => 'Postre' , 'precio' => '$80'],
+    ['img' => 'img/torta2.jpg', 'nombre' => 'Torta Decorada' , 'precio' => '$500'],
+    ['img' => 'img/macarrones.jpg', 'nombre' => 'Macarrons' , 'precio' => '$200'],
+    ['img' => 'img/galletaCake.jpg', 'nombre' => 'Mini tarta frutal' , 'precio' => '$500']
+    
+  ];
 
 ?>
   
