@@ -71,14 +71,14 @@
                     <img src="img/torta3.jpg"/>
                     <figcaption class="nombreArticulo">Torta Macarrons</figcaption>
                 </figure>
-                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
             <article class="elemento elemento2">
                 <figure>
                     <img src="img/CupCake.jpg"/> <figcaption class="nombreArticulo">Cupcakes</figcaption>
                 </figure>
-                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
             <article class="elemento elemento3">
@@ -86,7 +86,7 @@
                   <img src="img/torta1.jpg"/>
                   <figcaption class="nombreArticulo">Torta Celebracion</figcaption>
                 </figure>
-                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
             <article class="elemento elemento4">
@@ -94,7 +94,7 @@
                     <img src="img/chocolate.jpg"/>
                     <figcaption class="nombreArticulo">Torta ChocoCookie</figcaption>
                 </figure>
-                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
             <article class="elemento elemento5">
@@ -102,7 +102,7 @@
                     <img src="img/panettone.jpg"/>
                     <figcaption class="nombreArticulo">Panettone</figcaption>
                 </figure>
-                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
             <article class="elemento elemento6">
@@ -110,14 +110,14 @@
                     <img src="img/chocalateCake.jpg"/>
                     <figcaption class="nombreArticulo">Chocolate drip cake</figcaption>
                 </figure>
-                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
            <article class="elemento elemento7">
               <figure>
                  <img  src="img/torta de queso.jpg"/> <figcaption class="nombreArticulo">Cheesecake</figcaption>
                 </figure>
-              <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
             <article class="elemento elemento8">
@@ -125,7 +125,7 @@
                  <img src="img/galleta.jpg"/>
                  <figcaption class="nombreArticulo">Galletas Chocolate Chips</figcaption>
               </figure>
-                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+              <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
             <article class="elemento elemento9">
@@ -133,7 +133,7 @@
                     <img src="img/postre1.jpg"/>
                     <figcaption class="nombreArticulo">Postre</figcaption>
                 </figure>
-                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
             <article class="elemento elemento10">
@@ -141,7 +141,7 @@
                     <img src="img/torta2.jpg"/>
                     <figcaption class="nombreArticulo">Torta Decorada</figcaption>
                 </figure>
-                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
             <article class="elemento elemento11">
@@ -149,7 +149,7 @@
                     <img src="img/macarrones.jpg"/>
                     <figcaption class="nombreArticulo">Macarrons</figcaption>
                 </figure>
-                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
             <article class="elemento elemento12">
@@ -157,7 +157,7 @@
                     <img src="img/galletaCake.jpg"/>
                     <figcaption class="nombreArticulo">Galleta Cake</figcaption>
                 </figure>
-                <a href="vistaDelProducto.php"><input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre"></a>
+                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
 
         </div>

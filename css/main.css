@@ -128,6 +128,8 @@ height: 500px;
 .botoncomprar:hover {
     cursor:pointer;
     opacity: 0.8;
+    text-decoration: none;
+    color: #3B3B3B;
 }
 
 
