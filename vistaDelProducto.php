@@ -14,7 +14,9 @@
 </head>
 <body>
 
-  <?php require("encabezado.php"); ?>
+  <?php require("encabezado.php");
+  
+  ?>
 
     <main>
       <div class="contenedor1">
@@ -22,12 +24,12 @@
           <img src="img/chocalateCake.jpg"/>
           </article>
           <div class="alineacionTexto">
-              <h3>PRECIO: 600$</h3>
+              <h3> 600$ </h3>
               <h3>Cantidad</h3>
               <input class="botoncantidad" type="number"> <br>
               <h3>Agregar a tu lista</h3>
               <i class="fas fa-cart-arrow-down"></i>
-              <input class="botoncomprar" type="submit" size="15" value="Comprar" name="nombre">
+              <a class="botoncomprar" href="">Comprar</a>
           </div>
       </div>
 
