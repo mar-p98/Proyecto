@@ -1,3 +1,58 @@
+<?php
+
+  $email='';
+  $errorEmail='';
+  $errorPassword='';
+
+  if($_POST){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    if($email == ''){
+      $errorEmail = 'Ingresa tu email';
+    } else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+      $errorEmail = 'El email es inválido';
+    }
+
+    if($password == ''){
+      $errorPassword = 'Ingresa tu password';
+    }
+
+    //verificar que el usuario existe
+    if(empty($errorEmail) && empty($errorPassword)){
+      //traigo el archivo de json con los usuarios
+      $archivo = file_get_contents('usuarios.json');
+      //los transformo a array
+      $usuarios = json_decode($archivo, true);
+      //recorro el array de $usuarios
+      foreach ($usuarios as $usuario) {
+        if($usuario['email'] == $email && password_verify($password, $usuario['password'])){
+          //entra a este if si se encontró al usuario y se inicia sesion
+          $_SESSION['email'] = $usuario['email'];
+        //  $_SESSION['avatar'] = $usuario['avatar'];        todavia no vi esta parte;
+        //  $_SESSION['admin'] = $usuario['admin'];
+        //  $_SESSION['id'] = $usuario['id'];
+
+        //pregunto si el usuario eligió la opcion de mantenerse Conectado
+          if(isset($_POST['mantenerme'])){
+              //creo cookie de duracion de login -- 30 dias
+              setcookie('email', $email, time() + 60*60*24*30);
+          }
+
+          //redirijo
+          header('location: miPerfil.php'); //cambiar nombre cuando tengamos Perfil
+
+        }
+
+      }
+      $errorEmail = 'Usuario o clave inválidos';
+    }
+
+  }
+
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -33,29 +88,37 @@
               <h1>Inicia Sesión</h1>
               <h3>¡Mi cuenta!</h3>
             </div>
-
-            <form id="formulario">
+            <?php
+                var_dump($_POST);
+                echo $errorEmail;
+                echo '<br>' . $errorPassword;
+            ?>
+            <form id="formulario" method="post" action='formularioLogin.php'>
                 <p id="titulo-form"><b>Ingresa tus Datos</b></p>
                 <div class= "user_info">
-                <div class="form-group">
-
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-              </div>
-              <div class="form-group">
-                <label for="password">Contraseña</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
-                <small><a href="#" id="pass">¿Olvidaste tu contraseña?</a> </small>
-              </div>
-              <div class="boton">
-                <button type="submit" class="btn btn_login" >Iniciar Sesión</button>
-              </div>
-              <div class="registrarse">
-                <small id="pass">¿No tenés cuenta? <a href="formularioRegistro.php">Registrate</a> </small>
-              </div>
-
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name='email'
+                    value=<?php echo $email; ?>>
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" class="form-control"  name='password'>
+                    <small><a href="#" id="pass">¿Olvidaste tu contraseña?</a> </small>
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" name="mantenerme" class="form-check-input" id="mantenerme" value="1">
+                    <label class="form-check-label" for="mantenerme">Dejarme Conectado</label>
+                  </div>
+                  <div class="boton">
+                    <button type="submit" class="btn btn_login" >Iniciar Sesión</button>
+                  </div>
+                  <div class="registrarse">
+                    <small id="pass">¿No tenés cuenta? <a href="formularioRegistro.php">Registrate</a> </small>
+                  </div>
+                </div>
             </form>
-          </div>
+
 
           </div>
           <div class="col-lg-3">
