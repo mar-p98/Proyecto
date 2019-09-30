@@ -1,0 +1,63 @@
+[
+    {
+        "nombre": "Torta Macarrons",
+        "precio": "$500",
+        "img": "img/torta3.jpg"
+    },
+    {
+        "nombre": "Cupcake",
+        "precio": "$90",
+        "img": "img/CupCake.jpg"
+    },
+    {
+        "nombre": "Torta Celebracion",
+        "precio": "$800",
+        "img": "img/torta1.jpg"
+    },
+    {
+        "nombre": "Torta ChocoCookie",
+        "precio": "$800",
+        "img": "img/chocolate.jpg"
+    },
+    {
+        "nombre": "Panettone",
+        "precio": "$900",
+        "img": "img/panettone.jpg"
+    },
+    {
+        "nombre": "Chocolate drip cake",
+        "precio": "$700",
+        "img": "img/chocalateCake.jpg"
+    },
+    {
+        "nombre": "Cheesecake",
+        "precio": "500",
+        "img": "img/torta de queso.jpg"
+    },
+    {
+        "nombre": "Galletas Chocolate Chips",
+        "precio": "$100",
+        "img": "img/galleta.jpg"
+    },
+    {
+        "nombre": "Postre",
+        "precio": "$80",
+        "img": "img/postre1.jpg"
+    },
+    {
+        "nombre": "Torta Decorada",
+        "precio": "$500",
+        "img": "img/torta2.jpg"
+    },
+    {
+        "nombre": "Macarrons",
+        "precio": "$200",
+        "img": "img/macarrones.jpg"
+    },
+    {
+        "nombre": "Mini tarta frutal",
+        "precio": "$500",
+        "img": "img/galletaCake.jpg"
+    }
+
+]

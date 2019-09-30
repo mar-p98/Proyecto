@@ -20,7 +20,7 @@
 
     var_dump($json);
 
-    file_put_contents('usuarios.json', $json);
+    file_put_contents('json/usuarios.json', $json);
 
   }
 

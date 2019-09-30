@@ -21,7 +21,7 @@
     //verificar que el usuario existe
     if(empty($errorEmail) && empty($errorPassword)){
       //traigo el archivo de json con los usuarios
-      $archivo = file_get_contents('usuarios.json');
+      $archivo = file_get_contents('json/usuarios.json');
       //los transformo a array
       $usuarios = json_decode($archivo, true);
       //recorro el array de $usuarios

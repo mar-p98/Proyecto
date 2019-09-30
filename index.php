@@ -1,22 +1,7 @@
 <?php require("encabezado.php");
 
-  $productos = [
-
-    ['img' => 'img/torta3.jpg', 'nombre' => 'Torta Macarrons' , 'precio' => '$500'],
-    ['img' => 'img/CupCake.jpg', 'nombre' => 'Cupcake' , 'precio' => '$90'],
-    ['img' => 'img/torta1.jpg', 'nombre' => 'Torta Celebracion' , 'precio' => '$800'],
-    ['img' => 'img/chocolate.jpg', 'nombre' => 'Torta ChocoCookie' , 'precio' => '$800'],
-    ['img' => 'img/panettone.jpg', 'nombre' => 'Torta Macarrons' , 'precio' => '$900'],
-    ['img' => 'img/chocalateCake.jpg', 'nombre' => 'Chocolate drip cake' , 'precio' => '$700'],
-    ['img' => 'img/torta de queso.jpg', 'nombre' => 'Cheesecake' , 'precio' => '$500'],
-    ['img' => 'img/galleta.jpg', 'nombre' => 'Galletas Chocolate Chips' , 'precio' => '$100'],
-    ['img' => 'img/postre1.jpg', 'nombre' => 'Postre' , 'precio' => '$80'],
-    ['img' => 'img/torta2.jpg', 'nombre' => 'Torta Decorada' , 'precio' => '$500'],
-    ['img' => 'img/macarrones.jpg', 'nombre' => 'Macarrons' , 'precio' => '$200'],
-    ['img' => 'img/galletaCake.jpg', 'nombre' => 'Mini tarta frutal' , 'precio' => '$500']
-
-  ];
-
+  $contenido_archivo = file_get_contents('json/productos.json');
+  $productos = json_decode($contenido_archivo, true);
 
 ?>
 
@@ -42,11 +27,8 @@
 
 <body>
 
-
-
   <main>
 
-     <!-- queda pendiente buscar tamano de imagenes mas grande en pixabay-->
 
     <div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -88,103 +70,16 @@
 
         <div class="contenedor">
 
-            <article class="elemento" id="Elemento1">
+            <?php foreach ($productos as $idProducto => $producto) { ?>
+              <article class="elemento">
                 <figure>
-                    <img src="img/torta3.jpg"/>
-                    <figcaption class="nombreArticulo">Torta Macarrons</figcaption>
+                    <img src="<?php echo $producto['img']?>"/>
+                    <figcaption class="nombreArticulo"><?php echo $producto['nombre']?></figcaption>
                 </figure>
                 <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
             </article>
-
-            <article class="elemento">
-                <figure>
-                    <img src="img/CupCake.jpg"/> <figcaption class="nombreArticulo">Cupcakes</figcaption>
-                </figure>
-                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
-            </article>
-
-            <article class="elemento">
-                <figure>
-                  <img src="img/torta1.jpg"/>
-                  <figcaption class="nombreArticulo">Torta Celebracion</figcaption>
-                </figure>
-                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
-            </article>
-
-            <article class="elemento">
-                <figure>
-                    <img src="img/chocolate.jpg"/>
-                    <figcaption class="nombreArticulo">Torta ChocoCookie</figcaption>
-                </figure>
-                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
-            </article>
-
-            <article class="elemento">
-                <figure>
-                    <img src="img/panettone.jpg"/>
-                    <figcaption class="nombreArticulo">Panettone</figcaption>
-                </figure>
-                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
-            </article>
-
-            <article class="elemento">
-                <figure>
-                    <img src="img/chocalateCake.jpg"/>
-                    <figcaption class="nombreArticulo">Chocolate drip cake</figcaption>
-                </figure>
-                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
-            </article>
-
-           <article class="elemento">
-              <figure>
-                 <img  src="img/torta de queso.jpg"/> <figcaption class="nombreArticulo">Cheesecake</figcaption>
-                </figure>
-                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
-            </article>
-
-            <article class="elemento">
-             <figure>
-                 <img src="img/galleta.jpg"/>
-                 <figcaption class="nombreArticulo">Galletas Chocolate Chips</figcaption>
-              </figure>
-              <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
-            </article>
-
-            <article class="elemento">
-                <figure>
-                    <img src="img/postre1.jpg"/>
-                    <figcaption class="nombreArticulo">Postre</figcaption>
-                </figure>
-                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
-            </article>
-
-            <article class="elemento">
-                <figure>
-                    <img src="img/torta2.jpg"/>
-                    <figcaption class="nombreArticulo">Torta Decorada</figcaption>
-                </figure>
-                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
-            </article>
-
-            <article class="elemento">
-                <figure>
-                    <img src="img/macarrones.jpg"/>
-                    <figcaption class="nombreArticulo">Macarrons</figcaption>
-                </figure>
-                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
-            </article>
-
-            <article class="elemento">
-                <figure>
-                    <img src="img/galletaCake.jpg"/>
-                    <figcaption class="nombreArticulo">Mini tarta frutal</figcaption>
-                </figure>
-                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
-            </article>
-
+            <?php } ?>
         </div>
-
-
         </section>
   </main>
 
