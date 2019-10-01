@@ -2,28 +2,68 @@
 
   if($_POST){
 
-    $nombre= $_POST['nombre'];
     $email= $_POST['email'];
-    $password= password_hash($_POST['password'], PASSWORD_DEFAULT);
-    $telefono= $_POST['telefono'];
+    $password= $_POST['password'];
+    $nombreArchivo='';
+    //me faltan las validaciones de formato email, email no repetido, password no vacio y password igual a confirmar password
+    //si subio un archivo lo guardo en la carpeta avatars
+    //pregunto si se subio el archivo exitosamente
+    if ($_FILES['avatar']['error'] === 0) {
+          //pido la extension del archivo
+          $ext = pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION);
+          if ($ext != 'png' && $ext != 'jpg' && $ext != 'jpeg') {
+              $errorAvatar = 'archivo de formato invalido';
+          } else {
+              $nombreArchivo = $email . '.' . $ext;
+              //voy a mover el archivo del temporal a mi carpeta avatars
+              move_uploaded_file($_FILES['avatar']['tmp_name'], 'avatars/' . $nombreArchivo); //crear carpeta avatars
+          }
+      }
 
-    $usuario= [
-      'nombre' => $nombre,
-      'email' => $email,
-      'password' => $password,
-      'telefono' => $telefono
-    ];
 
-    var_dump($usuario);
+      //levanto mi archivo en formato json
+      $archivo = file_get_contents('usuarios.json');
+      //lo transformo a variables en php
+      $usuarios = json_decode($archivo, true);
+      $id = 0;
+      foreach ($usuarios as $usuario) {
+          if ($usuario['id'] > $id) {
+              $id = $usuario['id'];
+          }
+      }
+      $id++;
 
-    $json= json_encode($usuario);
 
-    var_dump($json);
 
-    file_put_contents('json/usuarios.json', $json);
+      $nombre= $_POST['nombre'];
+      $password= password_hash($_POST['password'], PASSWORD_DEFAULT);
+      $telefono= $_POST['telefono'];
 
-  }
+      //guardo los datos del usuario
+      $usuario= [
+        'nombre' => $nombre,
+        'email' => $email,
+        'password' => $password,
+        'telefono' => $telefono,
+        'avatar' => $nombreArchivo,
+        'admin' => false,
+        'id' => $id
+      ];
 
+      //agrego el usuario al array usuarios
+      $usuarios[] = $usuario;
+
+      $json= json_encode($usuarios);
+
+      file_put_contents('usuarios.json', $json);
+
+      //var_dump($usuario);
+      //var_dump($json);
+
+
+      header('location:formularioLogin.php');
+
+}
 
 ?>
 
@@ -77,12 +117,20 @@
                   <label for="password">Contraseña</label>
                   <input type="password" class="form-control" name="password" id="exampleInputPassword1">
                 </div>
-              <!--  <div class="form-group">
-                  <label for="password">Confirmar contraseña</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" >
+                <div class="form-group">
+                  <label for="confirm-password">Confirmar Password</label>
+                  <input type="password" class="form-control" id="confirm-password" name="confirm-password">
                 </div>
-              -->
-                <div class="boton"> <!--es de arriba, revisar que sea la misma, videos DH -->
+                <div class="form-group">
+                  <label for="avatar">Subir avatar</label>
+                  <input type="file"  id="avatar" name="avatar">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="terminos" name="terminos">
+                  <label class="form-check-label" for="terminos">Acepto terminos y condiciones</label>
+                </div>
+
+                <div class="boton"> 
                   <button type="submit" class="btn btn_login" >Registrarse</button>
                 </div>
               </div>

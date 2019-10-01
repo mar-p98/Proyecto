@@ -29,9 +29,9 @@
         if($usuario['email'] == $email && password_verify($password, $usuario['password'])){
           //entra a este if si se encontró al usuario y se inicia sesion
           $_SESSION['email'] = $usuario['email'];
-        //  $_SESSION['avatar'] = $usuario['avatar'];        todavia no vi esta parte;
-        //  $_SESSION['admin'] = $usuario['admin'];
-        //  $_SESSION['id'] = $usuario['id'];
+          $_SESSION['avatar'] = $usuario['avatar']; 
+          $_SESSION['admin'] = $usuario['admin'];
+          $_SESSION['id'] = $usuario['id'];
 
         //pregunto si el usuario eligió la opcion de mantenerse Conectado
           if(isset($_POST['mantenerme'])){

@@ -27,6 +27,8 @@
             <ul class="dropdown-menu">
                 <li id="dropdown-login"><a href="formularioLogin.php">Inicia Sesión</a></li>
                 <li id="dropdown-login"><a href="formularioRegistro.php">Registrate</a></li>
+                <li id="dropdown-login"><a href="">Mi Perfil</a></li>
+                <li id="dropdown-login"><a href="">Cerrar Sesión</a></li>
             </ul>
           </li>
         </ul>

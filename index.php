@@ -1,4 +1,4 @@
-<?php require("encabezado.php");
+<?php
 
   $contenido_archivo = file_get_contents('json/productos.json');
   $productos = json_decode($contenido_archivo, true);
@@ -26,6 +26,8 @@
 </head>
 
 <body>
+
+  <?php require("encabezado.php"); ?>
 
   <main>
 
