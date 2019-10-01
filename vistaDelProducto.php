@@ -1,3 +1,11 @@
+<?php
+  $idProducto = $_GET['producto'];
+  $contenido_archivo = file_get_contents('json/productos.json');
+  $productos = json_decode($contenido_archivo, true);
+  $producto = $productos[$idProducto];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,10 +29,10 @@
     <main>
       <div class="contenedor1">
           <article class="alineacion">
-          <img src="img/chocalateCake.jpg"/>
+          <img src="<?php echo $producto['img']?>"/>
           </article>
           <div class="alineacionTexto">
-              <h3> 600$ </h3>
+              <h3><?php echo $producto['precio']?></h3>
               <h3>Cantidad</h3>
               <input class="botoncantidad" type="number"> <br>
               <h3>Agregar a tu lista</h3>

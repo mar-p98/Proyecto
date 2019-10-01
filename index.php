@@ -49,7 +49,7 @@
                     <img src="<?php echo $producto['img']?>"/>
                     <figcaption class="nombreArticulo"><?php echo $producto['nombre']?></figcaption>
                 </figure>
-                <a class="botoncomprar" href="vistaDelProducto.php">Comprar</a>
+                <a class="botoncomprar" href="vistaDelProducto.php?producto=<?php echo $idProducto?>">Comprar</a>
             </article>
             <?php } ?>
         </div>
