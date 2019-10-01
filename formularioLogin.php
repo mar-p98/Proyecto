@@ -28,6 +28,8 @@
       foreach ($usuarios as $usuario) {
         if($usuario['email'] == $email && password_verify($password, $usuario['password'])){
           //entra a este if si se encontró al usuario y se inicia sesion
+          session_start();
+          
           $_SESSION['email'] = $usuario['email'];
           $_SESSION['avatar'] = $usuario['avatar']; 
           $_SESSION['admin'] = $usuario['admin'];
@@ -89,7 +91,6 @@
               <h3>¡Mi cuenta!</h3>
             </div>
             <?php
-                var_dump($_POST);
                 echo $errorEmail;
                 echo '<br>' . $errorPassword;
             ?>

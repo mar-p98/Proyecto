@@ -22,7 +22,7 @@
 
 
       //levanto mi archivo en formato json
-      $archivo = file_get_contents('usuarios.json');
+      $archivo = file_get_contents('json/usuarios.json');
       //lo transformo a variables en php
       $usuarios = json_decode($archivo, true);
       $id = 0;
@@ -55,7 +55,7 @@
 
       $json= json_encode($usuarios);
 
-      file_put_contents('usuarios.json', $json);
+      file_put_contents('json/usuarios.json', $json);
 
       //var_dump($usuario);
       //var_dump($json);
