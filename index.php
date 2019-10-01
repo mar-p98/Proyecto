@@ -31,49 +31,20 @@
 
   <main>
 
-
-    <div id="demo" class="carousel slide" data-ride="carousel">
-
-      <ul class="carousel-indicators">
-        <li data-target="#demo" data-slide-to="0" class="active"></li>
-        <li data-target="#demo" data-slide-to="1"></li>
-        <li data-target="#demo" data-slide-to="2"></li>
-      </ul>
-
-      <div class="carousel-inner container">
-
-        <div class="carousel-item active">
-          <img src="img/carrusel1.jpg" alt="Los Angeles">
+    <div class="imagenPrincipal container">
+          <img src="img/carrusel50.jpg" alt="">
         </div>
-        <div class="carousel-item">
-          <img src="img/carrusel2.jpg" alt="Chicago">
-        </div>
-        <div class="carousel-item">
-          <img src="img/carrusel3.jpg" alt="New York">
-        </div>
-      </div>
 
-      <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
+    <section id="titulo1">
 
-    </div>
+        <a name="productos"><h1>Nuestra Especialidad</h1>
 
-      <section id="titulo1">
-
-          <a name="productos"><h1>Nuestra Especialidad</h1>
-
-
-
-      </section>
-
+    </section>
+    <section>
         <div class="contenedor">
 
             <?php foreach ($productos as $idProducto => $producto) { ?>
-              <article class="elemento">
+            <article class="elemento">
                 <figure>
                     <img src="<?php echo $producto['img']?>"/>
                     <figcaption class="nombreArticulo"><?php echo $producto['nombre']?></figcaption>

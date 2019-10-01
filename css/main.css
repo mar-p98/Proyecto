@@ -68,9 +68,7 @@ main{
 
 /*estilo del Body*/
 
-
-
-.carousel-inner img {
+/*.carousel-inner img {
 
    width: 100%;
    max-height: 500px;
@@ -80,6 +78,16 @@ main{
 height: 500px;
 
 }
+*/
+
+.imagenPrincipal{
+  width: 100%;
+}
+.imagenPrincipal img{
+  width: 100%;
+}
+
+
 
   #titulo1 {
     margin: 1rem auto;
@@ -111,17 +119,19 @@ height: 500px;
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 .botoncomprar {
-    text-align: center;
-    margin: auto; display: block;
-    padding: 12px;
-    color: #616E6E;
-    background-color:#BFDCDA;
-    border-radius: 10px;
-    border: none;
-    font-family: 'Open Sans Condensed', sans-serif;
+  width: 150px;
+  text-align: center;
+  margin: auto; display: block;
+  padding: 12px;
+  color: #616E6E;
+  background-color:#BFDCDA;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Open Sans Condensed', sans-serif;
 
 }
 

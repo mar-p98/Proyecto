@@ -1,19 +1,24 @@
 /* PREGUNTAS FRECUENTES */
 /* Acordeón */
-
 body {
   background: rgba(255, 255, 255, 0.5);
   color: #616E6E;
   font-size: 1em;
   font-family: sans-serif;
 }
+
+h1{
+  text-align: center;
+  padding-top: 40px;
+}
+
 h3 {
   font-size: 1.3em;
 }
 
 
 .accordion {
-  max-width: 500px;
+  width: 80%;
   margin: 50px auto;
   box-shadow: 0 0 1px rgba(0,0,0,0.1);
 }
@@ -35,7 +40,7 @@ h3 {
 .accordion .btn {
   background-color: #BFDCDA;
   color: white;
-  font-size: 1em;
+  font-size: 25px;
   text-decoration: none;
   width: 100%;
   font-weight: bold;
