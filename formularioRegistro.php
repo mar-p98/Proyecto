@@ -1,5 +1,7 @@
 <?php
 
+  session_start();
+
   if($_POST){
 
     $email= $_POST['email'];
@@ -130,7 +132,7 @@
                   <label class="form-check-label" for="terminos">Acepto terminos y condiciones</label>
                 </div>
 
-                <div class="boton"> 
+                <div class="boton">
                   <button type="submit" class="btn btn_login" >Registrarse</button>
                 </div>
               </div>
