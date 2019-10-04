@@ -2,7 +2,15 @@
 
   $contenido_archivo = file_get_contents('json/productos.json');
   $productos = json_decode($contenido_archivo, true);
+  
+  if(isset($_GET['eliminar'])) {
+    unset($productos[$_GET['producto']]);
 
+    $listaActualizada = json_encode($productos);
+    file_put_contents('json/productos.json', $listaActualizada);
+
+  }
+  
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +46,7 @@
     <section id="titulo1">
 
         <a name="productos"><h1>Nuestra Especialidad</h1>
+        <a class="botonAgregar" href="agregar.php?producto=<?php echo $idProducto?>">Agregar Producto</a>
 
     </section>
     <section>
@@ -49,6 +58,8 @@
                     <img src="<?php echo $producto['img']?>"/>
                     <figcaption class="nombreArticulo"><?php echo $producto['nombre']?></figcaption>
                 </figure>
+                <a class="BotonElim" href="index.php?producto=<?php echo $idProducto?>&eliminar=true">Eliminar</a>
+                <a class="BotonModif" href="modificarProducto.php?producto=<?php echo $idProducto?>">Modificar</a>
                 <a class="botoncomprar" href="vistaDelProducto.php?producto=<?php echo $idProducto?>">Comprar</a>
             </article>
             <?php } ?>

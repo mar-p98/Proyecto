@@ -41,7 +41,7 @@
 
             <input class="botoncantidad" type="number"> <br>
             <h3>Agregar a tu lista</h3>
-            <i class="fas fa-cart-arrow-down"></i>
+            <a class="" href="vistaCarrito.php"><i class="fas fa-cart-arrow-down"></i></a>
             <a class="botoncomprar" href="">Comprar</a>
 
         </div>

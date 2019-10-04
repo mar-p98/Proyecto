@@ -34,33 +34,27 @@
           </div>
           <div class="nombre">
             <p>Nombre del producto</p>
+            <h3>Chocolate DripCake</h3>
           </div>
           <div class="precio">
-            <p>precio del producto</p>
+            <p>Precio del producto</p>
+            <h3>$500</h3>
           </div>
-
-            <a href="#">Eliminar</a>
-
         </div>
-
-
+        
         <div class="total">
+        <br>
+        <a class="EliminarDeCarrito" href="#">Eliminar</a>
+        <br>
           <h2>TOTAL</h2>
           <p>precio</p>
         </div>
-
       </div>
     </main>
 
-
-
-
-
-
-
-
-
-
+    <div class="boton">
+     <button type="submit" class="botoncomprar">Realizar Compra</button>
+    </div>
 
     <?php require("pieDePagina.php"); ?>
 
