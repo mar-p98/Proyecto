@@ -142,6 +142,45 @@ height: 500px;
     color: #3B3B3B;
 }
 
+.BotonElim{
+  color: #616E6E;
+  text-align: left;
+  margin: auto; display: block;
+}
+
+.BotonElim:hover {
+  cursor:pointer;
+  opacity: 0.8;
+  text-decoration: none;
+  color: rgb(27, 27, 27);
+}
+
+.BotonModif{
+  color: #616E6E;
+  text-align: left;
+  margin: auto; display: block;
+}
+
+.BotonModif:hover{
+  cursor:pointer;
+  opacity: 0.8;
+  text-decoration: none;
+  color: rgb(27, 27, 27);
+}
+
+.botonAgregar{
+  color: #616E6E;
+  text-align: right;
+  margin: auto; display: block;
+  font-family: 'Raleway', sans-serif;
+}
+
+.botonAgregar:hover{
+  cursor:pointer;
+  opacity: 0.8;
+  text-decoration: none;
+  color: rgb(27, 27, 27);
+}
 
 /* estilos de footer */
 

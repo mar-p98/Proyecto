@@ -31,40 +31,22 @@
   position: absolute;
 }
 
-.nombre{
+/*.nombre{
   width: 450px;
   z-index: 1;
   display: flex;
   padding-left: 120px;
   padding-bottom: 20px;
   align-self: flex-start;
-}
-
-.precio{   /* ultimo cambio  */
-  order:1;
-  display: flex;
-  flex-direction: column;
-  width: 100px;
-  align-items: flex-end;
-}
-
-.eliminar{
-  z-index: 9;
-  position: absolute;
-}
+}*/
 
 .total {
   display: inline;
   margin:30px;
 }
 
-.nombre, .precio, .eliminar,{
-  display: flex;
-}
-
-
-.precio, .eliminar{
-  text-align: right;
+.EliminarDeCarrito{
+ color: rgb(27, 27, 27);
 }
 
 @media (max-width: 991px) and (min-width: 768px){

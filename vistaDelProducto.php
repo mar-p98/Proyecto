@@ -4,6 +4,20 @@
   $productos = json_decode($contenido_archivo, true);
   $producto = $productos[$idProducto];
 
+  if (isset($_GET['agregar'])) {
+    session_start();
+
+    if (isset($_SESSION['carrito'])) {
+      $carrito = $_SESSION['carrito'];
+    } else {
+      $carrito = []; 
+    }
+
+    $carrito[] = $producto;
+    $_SESSION['carrito'] = $carrito;
+    header('location:vistaCarrito.php');
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -23,25 +37,29 @@
 <body>
 
   <?php require("encabezado.php");
-  
+
   ?>
 
-    <main>
-      <div class="contenedor1">
-          <article class="alineacion">
-          <img src="<?php echo $producto['img']?>"/>
-          </article>
-          <div class="alineacionTexto">
-              <h3><?php echo $producto['precio']?></h3>
-              <h3>Cantidad</h3>
-              <input class="botoncantidad" type="number"> <br>
-              <h3>Agregar a tu lista</h3>
-              <i class="fas fa-cart-arrow-down"></i>
-              <a class="botoncomprar" href="">Comprar</a>
-          </div>
-      </div>
+  <main>
+    <div class="nombreDeProducto">
+    <h2><?php echo $producto['nombre']?></h2>
+    </div>
+    <div class="contenedor1">
 
-    </main>
+        <div class="img">
+          <img src="<?php echo $producto['img']?>"/>
+        </div>
+        <div class="alineacionTexto">
+            <h3>$<?php echo $producto['precio']?></h3>
+            
+            <h3>Cantidad</h3>
+            <input min=0 max=50 class="botoncantidad" type="number"> <br><br>
+            <a class="botoncomprar" href="vistaDelProducto.php?producto=<?=$idProducto?>&agregar=true"><i class="fas fa-cart-arrow-down"></i> Agregar al carrito</a>
+
+        </div>
+    </div>
+
+  </main>
     <?php require("pieDePagina.php"); ?>
 
 

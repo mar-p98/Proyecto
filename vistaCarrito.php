@@ -1,3 +1,12 @@
+<?php
+
+  session_start();
+
+  $carrito = $_SESSION['carrito'];
+  $total = 0;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -25,42 +34,39 @@
     <main>
       <div class="titulo">
         <h1>Mi carrito</h1>
-
       </div>
+
       <div class="container contenedorProd">
+      <?php foreach ($carrito as $producto) : ?>
         <div class="producto">
           <div class="img">
-            <img src="img/chocolate-cake.png" alt="">
+            <img src="<?=$producto['img']?>" alt="">
           </div>
           <div class="nombre">
             <p>Nombre del producto</p>
+            <h3><?=$producto['nombre']?></h3>
           </div>
           <div class="precio">
-            <p>precio del producto</p>
+            <p>Precio del producto</p>
+            <h3>$<?=$producto['precio']?></h3>
+            <?php $total += $producto['precio']?>
           </div>
-
-            <a href="#">Eliminar</a>
-
         </div>
-
-
         <div class="total">
-          <h2>TOTAL</h2>
-          <p>precio</p>
-        </div>
+        <p><a class="EliminarDeCarrito" href="#">Eliminar</a></p>
+      </div>
+      <?php endforeach; ?>
 
+
+      <div class="total">
+          <h2>TOTAL</h2>
+          <p>$<?=$total?></p>
       </div>
     </main>
 
-
-
-
-
-
-
-
-
-
+    <div class="boton">
+     <button type="submit" class="botoncomprar">Realizar Compra</button>
+    </div>
 
     <?php require("pieDePagina.php"); ?>
 
