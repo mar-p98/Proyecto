@@ -23,33 +23,36 @@
 </header>
 
 <main>
-    <?php
-    session_start();
-    $sessData = !empty($_SESSION['sessData'])?$_SESSION['sessData']:'';
-    if(!empty($sessData['status']['msg'])){
-        $statusMsg = $sessData['status']['msg'];
-        $statusMsgType = $sessData['status']['type'];
-        unset($_SESSION['sessData']['status']);
-    }
-    ?>
+
+  <?php
+  session_start();
+  $sessData = !empty($_SESSION['sessData'])?$_SESSION['sessData']:'';
+  if(!empty($sessData['status']['msg'])){
+      $statusMsg = $sessData['status']['msg'];
+      $statusMsgType = $sessData['status']['type'];
+      unset($_SESSION['sessData']['status']);
+  }
+  ?>
+
     <div class="container">
       <div class="row contenedor">
         <div class="col-12 col-lg-6">
 
           <div class="tituloPrincipal">
-            <h1>Recupera tu contraseña</h1>
+            <h1>Nueva contraseña</h1>
           </div>
 
           <?php echo !empty($statusMsg)?'<p class="'.$statusMsgType.'">'.$statusMsg.'</p>':''; ?>
 
 
               <form id=formulario action='cambiarContrasena.php' method="post">
-                  <p id="titulo-form"><b>Ingresa tu correo-e</b></p>
+                  <p id="titulo-form"><b>Ingresa tu nueva contraseña</b></p>
                     <div class= "user_info">
                         <div class="form-group">
-                            <input type="email" class="form-control" name="Correo-e" placeholder="Ingresa tu correo-e" required="">
+                            <input type="password" class="form-control" name="Contraseña" placeholder="Ingresa tu nueva contraseña" required="">
+                            <input type="password" class="form-control" name="Contraseña" placeholder="Reingresa tu nueva contraseña" required="">
                               <div class="boton">
-                                  <input type="submit" class="btn btn_login" name="forgotSubmit" value="Restaurar">
+                                  <input type="submit" class="btn btn_login" name="forgotSubmit" value="Confirmar">
                               </div>
                         </div>
                     </div>
