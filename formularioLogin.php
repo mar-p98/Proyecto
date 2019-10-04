@@ -1,5 +1,6 @@
 <?php
 
+  include_once('funciones/autenticador.php');
   $email='';
   $errorEmail='';
   $errorPassword='';
@@ -20,32 +21,32 @@
 
     //verificar que el usuario existe
     if(empty($errorEmail) && empty($errorPassword)){
-      //traigo el archivo de json con los usuarios
+
       $archivo = file_get_contents('json/usuarios.json');
-      //los transformo a array
+
       $usuarios = json_decode($archivo, true);
-      //recorro el array de $usuarios
+
       foreach ($usuarios as $usuario) {
         if($usuario['email'] == $email && password_verify($password, $usuario['password'])){
           //entra a este if si se encontró al usuario y se inicia sesion
           session_start();
-          
+          $_SESSION['nombre'] = $usuario['nombre'];
           $_SESSION['email'] = $usuario['email'];
-          $_SESSION['avatar'] = $usuario['avatar']; 
+          $_SESSION['telefono'] = $usuario['telefono'];
+          $_SESSION['avatar'] = $usuario['avatar'];
           $_SESSION['admin'] = $usuario['admin'];
           $_SESSION['id'] = $usuario['id'];
 
-        //pregunto si el usuario eligió la opcion de mantenerse Conectado
+
           if(isset($_POST['mantenerme'])){
               //creo cookie de duracion de login -- 30 dias
               setcookie('email', $email, time() + 60*60*24*30);
           }
 
           //redirijo
-          header('location: miPerfil.php'); //cambiar nombre cuando tengamos Perfil
+          header('location: miPerfil.php');
 
         }
-
       }
       $errorEmail = 'Usuario o clave inválidos';
     }
@@ -109,7 +110,7 @@
                   </div>
                   <div class="form-group form-check">
                     <input type="checkbox" name="mantenerme" class="form-check-input" id="mantenerme" value="1">
-                    <label class="form-check-label" for="mantenerme">Dejarme Conectado</label>
+                    <label class="form-check-label" for="mantenerme">Recuerdame</label>
                   </div>
                   <div class="boton">
                     <button type="submit" class="btn btn_login" >Iniciar Sesión</button>

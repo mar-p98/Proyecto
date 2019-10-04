@@ -1,27 +1,67 @@
 <?php
 
-  session_start();
+  include_once('funciones/autenticador.php');
+
+  $email='';
+  $errorEmail='';
+  $errorTel='';
+  $errorPassword='';
+  $errorConfirmarPass= '';
+  $terminos= '';
 
   if($_POST){
 
     $email= $_POST['email'];
     $password= $_POST['password'];
-    $nombreArchivo='';
-    //me faltan las validaciones de formato email, email no repetido, password no vacio y password igual a confirmar password
-    //si subio un archivo lo guardo en la carpeta avatars
-    //pregunto si se subio el archivo exitosamente
-    if ($_FILES['avatar']['error'] === 0) {
-          //pido la extension del archivo
-          $ext = pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION);
-          if ($ext != 'png' && $ext != 'jpg' && $ext != 'jpeg') {
-              $errorAvatar = 'archivo de formato invalido';
-          } else {
-              $nombreArchivo = $email . '.' . $ext;
-              //voy a mover el archivo del temporal a mi carpeta avatars
-              move_uploaded_file($_FILES['avatar']['tmp_name'], 'avatars/' . $nombreArchivo); //crear carpeta avatars
-          }
-      }
+    $nombre= $_POST['nombre'];
+    $telefono= $_POST['telefono'];
 
+    $nombreArchivo='';
+
+
+      //validaciones
+
+    if($email == ''){
+      $errorEmail = 'Ingresa tu email';
+    } else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+      $errorEmail = 'El email es inválido';
+    } //verificar que el email no esté registrado ya
+
+
+    if($telefono= ''){
+      $errorTel= 'Ingresa tu telefono';
+    }
+    if($password == ''){
+      $errorPassword = 'Ingresa tu password';
+    }
+    if($_POST['confirmarPass']=''){
+      $errorConfirmarPass= 'Confirma la contraseña';
+    } else if($password != $_POST['confirmarPass']){
+      $errorConfirmarPass = 'La contraseña no coincide';
+    }
+    if(!isset($_POST['terminos'])){
+      $terminos = 'Acepta los terminos y condiciones';
+    }
+
+    //si subio un archivo lo guardo en la carpeta avatars
+
+    if($_FILES){
+      if ($_FILES['avatar']['error'] === 0) {
+            //pido la extension del archivo
+            $ext = pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION);
+            if ($ext != 'png' && $ext != 'jpg' && $ext != 'jpeg') {
+                $errorAvatar = 'archivo de formato invalido';
+            } else {
+                $nombreArchivo = $email . '.' . $ext;
+                //voy a mover el archivo del temporal a mi carpeta avatars
+                move_uploaded_file($_FILES['avatar']['tmp_name'], 'avatars/' . $nombreArchivo); //crear carpeta avatars
+            }
+        }
+    }
+
+
+
+    if(empty($errorTel) && empty($errorEmail) && empty($errorPassword) && empty($errorAvatar) && empty($errorConfirmarPass) && empty($terminos)){
 
       //levanto mi archivo en formato json
       $archivo = file_get_contents('json/usuarios.json');
@@ -32,20 +72,19 @@
           if ($usuario['id'] > $id) {
               $id = $usuario['id'];
           }
+          if ($email == $usuario ['email']) {
+            $errorEmail = 'Este email ya está registrado';
+          }
       }
       $id++;
 
-
-
-      $nombre= $_POST['nombre'];
-      $password= password_hash($_POST['password'], PASSWORD_DEFAULT);
-      $telefono= $_POST['telefono'];
+      $hash= password_hash($_POST['password'], PASSWORD_DEFAULT);
 
       //guardo los datos del usuario
       $usuario= [
         'nombre' => $nombre,
         'email' => $email,
-        'password' => $password,
+        'password' => $hash,
         'telefono' => $telefono,
         'avatar' => $nombreArchivo,
         'admin' => false,
@@ -62,9 +101,8 @@
       //var_dump($usuario);
       //var_dump($json);
 
-
       header('location:formularioLogin.php');
-
+    }
 }
 
 ?>
@@ -100,20 +138,30 @@
                   <h1>Registrate</h1>
                   <h3>¡Únete para hacer tus pedidos!</h3>
                 </div>
-              <form id="formulario" method='post'>
+
+                <?php
+                //var_dump($_POST);
+                 echo $errorTel;
+                 echo $errorEmail;
+                 echo $errorPassword;
+                 echo $errorConfirmarPass;
+                 echo $terminos;
+                 ?>
+              <form id="formulario" method='post' action="" enctype="multipart/form-data">
                 <p id="titulo-form"><b>Ingresa tus Datos</b></p>
                 <div class= "user_info">
                 <div class="form-group" >
                   <label for="nombre">Nombre</label>
-                  <input type="text" class="form-control" name="nombre" value="">
+                  <input type="text" class="form-control" name="nombre" value=''>
                 </div>
                 <div class="form-group">
                   <label for="tel">Telefono</label>
-                  <input type="tel" class="form-control" name="telefono" value="">
+                  <input type="tel" class="form-control" name="telefono" value=''>
                 </div>
                 <div class= form-group>
                   <label for="email">Email</label>
-                  <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                  <input type="email" class="form-control" name="email" id="exampleInputEmail1"
+                  aria-describedby="emailHelp" value='<?php echo $email; ?>'>
                 </div>
                 <div class="form-group">
                   <label for="password">Contraseña</label>
@@ -121,11 +169,11 @@
                 </div>
                 <div class="form-group">
                   <label for="confirm-password">Confirmar Password</label>
-                  <input type="password" class="form-control" id="confirm-password" name="confirm-password">
+                  <input type="password" class="form-control" name="confirmarPass" id="confirm-password" >
                 </div>
                 <div class="form-group">
                   <label for="avatar">Subir avatar</label>
-                  <input type="file"  id="avatar" name="avatar">
+                  <input type="file" name="avatar" id="avatar">
                 </div>
                 <div class="form-group form-check">
                   <input type="checkbox" class="form-check-input" id="terminos" name="terminos">
@@ -160,4 +208,4 @@
       </body>
 
 
-      </html>
+  </html>

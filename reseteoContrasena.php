@@ -1,3 +1,13 @@
+<?php
+session_start();
+$sessData = !empty($_SESSION['sessData'])?$_SESSION['sessData']:'';
+if(!empty($sessData['status']['msg'])){
+    $statusMsg = $sessData['status']['msg'];
+    $statusMsgType = $sessData['status']['type'];
+    unset($_SESSION['sessData']['status']);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
@@ -18,21 +28,9 @@
 
 <body>
 
-<header>
-      <?php require("encabezado.php"); ?>
-</header>
+  <?php require("encabezado.php"); ?>
 
-<main>
-
-  <?php
-  session_start();
-  $sessData = !empty($_SESSION['sessData'])?$_SESSION['sessData']:'';
-  if(!empty($sessData['status']['msg'])){
-      $statusMsg = $sessData['status']['msg'];
-      $statusMsgType = $sessData['status']['type'];
-      unset($_SESSION['sessData']['status']);
-  }
-  ?>
+  <main>
 
     <div class="container">
       <div class="row contenedor">
@@ -61,11 +59,11 @@
         </div>
       </div>
     </div>
-</main>
+  </main>
 
-<footer>
-    <?php require("pieDePagina.php"); ?>
-</footer>
+
+  <?php require("pieDePagina.php"); ?>
+
 
 </body>
 </html>
