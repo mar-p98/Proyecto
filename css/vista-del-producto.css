@@ -19,8 +19,7 @@
   background-color:#BFDCDA;
   border-radius: 10px;
   border: none;
-  font-family: 'Open Sans Condensed', sans-serif;
-
+  font-family:'Raleway', sans-serif;
 }
 
 .img{
@@ -53,7 +52,7 @@ img{
 
 .alineacionTexto{
   padding: 40px;
-  font-family:'Open Sans Condensed', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .nombreDeProducto{
