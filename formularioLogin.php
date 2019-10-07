@@ -29,7 +29,6 @@
       foreach ($usuarios as $usuario) {
         if($usuario['email'] == $email && password_verify($password, $usuario['password'])){
           //entra a este if si se encontró al usuario y se inicia sesion
-          session_start();
           $_SESSION['nombre'] = $usuario['nombre'];
           $_SESSION['email'] = $usuario['email'];
           $_SESSION['telefono'] = $usuario['telefono'];
@@ -40,7 +39,12 @@
 
           if(isset($_POST['mantenerme'])){
               //creo cookie de duracion de login -- 30 dias
-              setcookie('email', $email, time() + 60*60*24*30);
+              setcookie('email', $_SSESION['email'], time() + 60*60*24*30);
+              setcookie('nombre', $_SESSION['nombre'], time() + 60*60*24*30);
+              setcookie('telefono', $_SESSION['telefono'], time() + 60*60*24*30);
+              setcookie('avatar', $_SESSION['avatar'], time() + 60*60*24*30);
+              setcookie('admin', $_SESSION['admin'], time() + 60*60*24*30);
+              setcookie('id', $_SESSION['id'], time() + 60*60*24*30);
           }
 
           //redirijo

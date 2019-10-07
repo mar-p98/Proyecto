@@ -1,6 +1,7 @@
 <?php
 require_once('funciones/autoload.php');
 //esta la cookie email creada
+/*
 if (isset($_COOKIE['email'])) {
     //aqui logeo al usuario
     $_SESSION['email'] = $_COOKIE['email'];
@@ -9,6 +10,15 @@ if (isset($_COOKIE['email'])) {
     $_SESSION['id'] = 1;
     $_SESSION['admin'] = false;
 }
+
+*/
+
+  if(elUsuarioEstaLogueado()){
+    $nombre= $_SESSION['nombre'];
+    $email= $_SESSION['email'];
+    $tel = $_SESSION['telefono'];
+  }
+
     //logeado
     if (!isset($_SESSION ['email'] ))  {
         header('location:formularioRegistro.php');
@@ -18,11 +28,16 @@ if (isset($_COOKIE['email'])) {
         echo 'Ud es un Admin->>>>>>';
     }
     echo 'Bienvenido ' . $_SESSION['email'];
-?>
+
+/*
 <form class="" action="logout.php" method="post">
     <button type="submit" name="button">Deslogearme</button>
 </form>
 <a href="logout.php">Salir</a>
+*/
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -74,15 +89,15 @@ if (isset($_COOKIE['email'])) {
                 <div class= "user_info">
                   <div class="form-group" >
                     <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" name="nombre" value=''>
+                    <input type="text" class="form-control" name="nombre" value='<?php echo $nombre; ?>'>
                   </div>
                   <div class="form-group">
                     <label for="tel">Telefono</label>
-                    <input type="tel" class="form-control" name="telefono" value=''>
+                    <input type="tel" class="form-control" name="telefono" value='<?php echo $tel; ?>'>
                   </div>
                   <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" name='email'
+                    <input type="email" class="form-control" name='email' value='<?php echo $email; ?>'>
                   </div>
 
 

@@ -3,6 +3,8 @@
   include_once('funciones/autenticador.php');
 
   $email='';
+  $telefono='';
+  $nombre='';
   $errorEmail='';
   $errorTel='';
   $errorPassword='';
@@ -13,6 +15,7 @@
 
     $email= $_POST['email'];
     $password= $_POST['password'];
+    $confirmar = $_POST['confirmar'];
     $nombre= $_POST['nombre'];
     $telefono= $_POST['telefono'];
 
@@ -34,9 +37,9 @@
     if($password == ''){
       $errorPassword = 'Ingresa tu password';
     }
-    if($_POST['confirmarPass']=''){
+    if($confirmar==''){
       $errorConfirmarPass= 'Confirma la contraseña';
-    } else if($password != $_POST['confirmarPass']){
+    } else if($confirmar != $password){
       $errorConfirmarPass = 'La contraseña no coincide';
     }
     if(!isset($_POST['terminos'])){
@@ -50,7 +53,7 @@
             //pido la extension del archivo
             $ext = pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION);
             if ($ext != 'png' && $ext != 'jpg' && $ext != 'jpeg') {
-                $errorAvatar = 'archivo de formato invalido';
+                $errorAvatar = 'Archivo de formato invalido';
             } else {
                 $nombreArchivo = $email . '.' . $ext;
                 //voy a mover el archivo del temporal a mi carpeta avatars
@@ -71,9 +74,6 @@
       foreach ($usuarios as $usuario) {
           if ($usuario['id'] > $id) {
               $id = $usuario['id'];
-          }
-          if ($email == $usuario ['email']) {
-            $errorEmail = 'Este email ya está registrado';
           }
       }
       $id++;
@@ -147,16 +147,16 @@
                  echo $errorConfirmarPass;
                  echo $terminos;
                  ?>
-              <form id="formulario" method='post' action="" enctype="multipart/form-data">
+              <form id="formulario" method='post' action="formularioRegistro.php" enctype="multipart/form-data">
                 <p id="titulo-form"><b>Ingresa tus Datos</b></p>
                 <div class= "user_info">
                 <div class="form-group" >
                   <label for="nombre">Nombre</label>
-                  <input type="text" class="form-control" name="nombre" value=''>
+                  <input type="text" class="form-control" name="nombre" value='<?php echo $nombre; ?>'>
                 </div>
                 <div class="form-group">
                   <label for="tel">Telefono</label>
-                  <input type="tel" class="form-control" name="telefono" value=''>
+                  <input type="tel" class="form-control" name="telefono" value='<?php echo $telefono; ?>'>
                 </div>
                 <div class= form-group>
                   <label for="email">Email</label>

@@ -3,7 +3,9 @@
   <div class="row">
     <div class="col-12 col-md-6 centrado">
       <div class="">
-        <h1>LOGO</h1>
+        <div class="divLogo">
+          <img src="img/FourBakery.png" alt="" width="100%">
+        </div>
         <p>Seguinos :
           <a href="https://facebook.com"> <ion-icon name="logo-facebook" size="large class="redes_icons"" ></ion-icon> </a>
           <a href="https://twitter.com"> <ion-icon name="logo-twitter" size="large class="redes_icons"" ></ion-icon></a>

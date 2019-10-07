@@ -1,3 +1,7 @@
+<?php
+  include_once('funciones/autenticador.php');
+ ?>
+
   <header >
     <div class="encabezado">
       <img id="logo" src="img/FourBakery.png"  width="80px"alt="">
@@ -21,15 +25,29 @@
             <!-- <a id=iconoPerson href="formularioLogin.php">
               <span class= 'fa fa-user-circle' width="6" height="6"></span> </a>
             </a> -->
+          <?php if(!elUsuarioEstaLogueado()){ ?>
             <button class="btn" type="button" name="button" data-toggle="dropdown">
               <span class= 'fa fa-user-circle' width="6" height="6"></span>
             </button>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" id='dropdown-ul'>
                 <li id="dropdown-login"><a href="formularioLogin.php">Inicia Sesión</a></li>
                 <li id="dropdown-login"><a href="formularioRegistro.php">Registrate</a></li>
-                <li id="dropdown-login"><a href="">Mi Perfil</a></li>
-                <li id="dropdown-login"><a href="">Cerrar Sesión</a></li>
             </ul>
+          <?php } else {?>
+              <button class="btn botonIconoUser" type="button" name="button" data-toggle="dropdown">
+                <span class= 'fa fa-user-circle' width="6" height="6"></span>
+                <span class='nombreUsuario'> <?php echo $_SESSION['nombre']; ?> </span>
+              </button>
+              <ul class="dropdown-menu" id='dropdown-ul'>
+                <li id="dropdown-login"><a href="miPerfil.php">Mi Perfil</a></li>
+                <li id="dropdown-login">
+                  <form class="" action="cerrarSesión.php" method="post">
+                    <button type="submit" name="button" class='botonLogout'> Cerrar Sesión</button>
+                  </form>
+                </li>
+              </ul>
+            <?php } ?>
+
           </li>
         </ul>
       </div>
