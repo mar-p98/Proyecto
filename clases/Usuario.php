@@ -1,17 +1,25 @@
 <?php
 
 abstract class Usuario{
-
+  private $nombre;
   private $email;
-  private $contrasena;
+  private $password;
 
 
 
-  public function __construct(string $email, string $contrasena){
+  public function __construct(string $email, string $password){
     $this->setEmail($email);
-    $this->setContrasena($contrasena);
+    $this->setPassword($password);
   }
 
+  public function getNombre()
+  {
+    return $this->nombre;
+  }
+  public function setNombre($nom)
+  {
+    return $this->nombre = $nom;
+  }
 
   public function getEmail(){
     return $this->email;
@@ -20,25 +28,17 @@ abstract class Usuario{
     $this->email = $email;
   }
 
-  public function getContrasena(){
-    return $this->contrasena;
+  public function getPassword(){
+    return $this->password;
   }
-  public function setContrasena($contrasena){
-    $this->encriptarPass($contrasena);
+  public function setPassword($password){
+    $this->encriptarPass($password);
   }
 
-/*  public function getTelefono(){
-    return $this->telefono;
-  }
-  public function setTelefono($telefono){
-    $this->telefono = $telefono;
-  }
-*/   //en el proyecto tenemos Telefono, modificar despues
 
-
-  private function encriptarPass(string $hash){
-    $this->contrasena = password_hash($hash, PASSWORD_DEFAULT);
-  }
+//  private function encriptarPass(string $hash){
+//    $this->contrasena = password_hash($hash, PASSWORD_DEFAULT);
+//  }
 
 
 }

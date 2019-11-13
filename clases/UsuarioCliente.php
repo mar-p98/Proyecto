@@ -1,66 +1,44 @@
 <?php
 
 class UsuarioCliente extends Usuario{
-  private $nombre;
   private $direccion;
   private $telefono;
   private $avatar;
-  private $id;
   private $admin;
-  private Carrito $carrito;
-  private Pedido $pedido;
 
-  public function getNombre() : string
-  {
-    return $this->nombre;
-  }
-
-  public function setNombre($nombre)
-  {
-    return $this->nombre = $nombre;
-  }
 
   public function getDireccion() : string
   {
     return $this->direccion;
   }
 
-  public function setDireccion($dir)
+  public function setDireccion($dir) : string
   {
     return $this->direccion = $dir;
   }
 
-  public function getTelefono() : int
+  public function getTelefono() :
   {
     return $this->telefono
   }
 
-  public function setTelefono($tel)
+  public function setTelefono($tel) :
   {
     return $this->telefono = $tel;
   }
 
-  public function getAvatar()
+  public function getAvatar() : string
   {
       return $this->avatar
   }
 
-  public function setAvatar($avatar)
+  public function setAvatar($avatar) : string
   {
     return $this->avatar = $avatar;
   }
 
-  public function getId() : int
-  {
-    return $this->id;
-  }
 
-  public function setId($id)
-  {
-    return $this->id = $id;
-  }
-
-  public function getAdmin() : string
+  public function getAdmin() : boolean
   {
     return $this->admin;
   }
@@ -70,40 +48,15 @@ class UsuarioCliente extends Usuario{
     return $this->admin = $admin;
   }
 
-  public function getCarrito() : Carrito
+  public function getCarrito() : boolean
   {
     return $this->carrito;
   }
 
-  public function setCarrito($carrito)
-  {
-    return $this->carrito = $carrito;
-  }
-
-  public function getPedido() : Pedido
-  {
-    return $this->pedido;
-  }
-
-  public function setPedido($pedido)
-  {
-    return $this->pedido = $pedido;
-  }
-
-
-  private function hacerConsulta()
-  {
-    
-  }
-
-  private function seleccionarProducto()
-  {
-
-  }
 
   private function pagar()
   {
-
+    
   }
 
 

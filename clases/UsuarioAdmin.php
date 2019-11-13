@@ -2,17 +2,7 @@
 
 class UsuarioAdmin extends Usuario {
 
-  private $id;
   private $admin;
-
-  public function getId()
-  {
-    return $this->id;
-  }
-  public function setId($id)
-  {
-    return $this->id = $id;
-  }
 
   public function getAdmin()
   {
@@ -38,6 +28,6 @@ class UsuarioAdmin extends Usuario {
 
   }
 
-  
+
 
 }
